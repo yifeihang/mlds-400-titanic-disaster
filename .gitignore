@@ -1,0 +1,31 @@
+# --- DATA ---
+src/data/
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment folders
+venv/
+.env/
+
+# Jupyter Notebook checkpoints (if used)
+.ipynb_checkpoints/
+
+# --- Docker ---
+# Ignore local files created by Docker builds
+*.log
+docker-compose.override.yml
+
+# --- Windows System Files ---
+Thumbs.db
+Desktop.ini
+
+# --- Cursor / VS Code Editor Files ---
+.vscode/
+.history/
+
+# --- Misc ---
+.DS_Store
