@@ -1,16 +1,3 @@
-"""
-src/python/train_and_predict_save.py
-
-Usage (from repo root):
-    python src/python/train_and_predict_save.py
-
-Behavior:
-- Trains a logistic regression on ../data/train.csv
-- Applies identical preprocessing to ../data/test.csv (uses TRAIN medians/scaler)
-- Saves predictions to: src/python/test_predictions.csv
-- Prints only two sections: CHANGES and RESULTS
-"""
-
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
