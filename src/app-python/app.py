@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
@@ -87,6 +88,11 @@ def main():
     else:
         # If no PassengerId, give a simple index
         out_df = pd.DataFrame({'Index': X_test.index, 'Predicted': preds})
+
+    # Ensure output directory exists before saving
+    out_dir = os.path.dirname(OUT_PRED_CSV)
+    if out_dir:
+        os.makedirs(out_dir, exist_ok=True)
 
     # Save predictions
     out_df.to_csv(OUT_PRED_CSV, index=False)
